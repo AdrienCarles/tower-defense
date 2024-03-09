@@ -10,13 +10,13 @@ function Enemy({ type, grid, enemyReachedEnd }) {
   useEffect(() => {
     switch (type) {
       case 'type1':
-        setEnemy(() => ({ color: 'green', shape: 'circle', size: 20, speed: 400 }));
+        setEnemy(() => ({ color: 'green', shape: 'circle', size: 20, speed: 400, health: 5}));
         break;
       case 'type2':
-        setEnemy(() => ({ color: 'blue', shape: 'square', size: 15, speed: 100 }));
+        setEnemy(() => ({ color: 'blue', shape: 'square', size: 15, speed: 100, health: 3 }));
         break;
       case 'type3':
-        setEnemy(() => ({ color: 'black', shape: 'square', size: 30, speed: 500 }));
+        setEnemy(() => ({ color: 'black', shape: 'square', size: 30, speed: 500, health: 10 }));
         break;
       default:
         setEnemy(() => ({ health: 50, color: 'black', shape: 'circle' }));

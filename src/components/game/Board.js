@@ -16,6 +16,45 @@ function Board({ levelId, grid, setSelectedCell, selectedCell, selectedTower, se
         }
     }, [selectedCell, selectedTower, setSelectedCell, setSelectedTower, updatedGrid])
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            detectAndFireAtEnemies();
+        }, 1000); // Vérifie les ennemis à portée toutes les 1 secondes
+
+        return () => clearInterval(interval);
+    }, [updatedGrid, enemys]); // Assurez-vous que cet effet s'exécute à chaque mise à jour de la grille ou des ennemis
+
+    function detectAndFireAtEnemies() {
+        // Logique pour détecter les ennemis et leur tirer dessus
+        // Parcourez la grille pour trouver les tourelles
+        updatedGrid.forEach((row, rowIndex) => {
+          row.forEach((cell, cellIndex) => {
+            if (cell.tower) {
+              // Pour chaque tourelle, vérifiez chaque ennemi pour voir s'il est à portée
+              enemys.forEach((enemy, enemyIndex) => {
+                if (isEnemyInRange(cell, enemy)) {
+                  fireAtEnemy(cell.tower, enemy);
+                  if (enemy.health <= 0) {
+                    // Supprimez l'ennemi de la liste si sa santé est 0 ou moins
+                    enemys.splice(enemyIndex, 1);
+                  }
+                }
+              });
+            }
+          });
+        });
+      }
+    
+      function isEnemyInRange(tower, enemy) {
+        // Calculez la distance entre la tourelle et l'ennemi pour déterminer si l'ennemi est à portée
+        // Retournez true si l'ennemi est à portée, false sinon
+      }
+    
+      function fireAtEnemy(tower, enemy) {
+        // Réduisez la santé de l'ennemi en fonction des dégâts de la tourelle
+        enemy.health -= tower.damage;
+      }
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', boxSizing: 'border-box', position: 'relative' }}>
             {updatedGrid.map((row, y) => (
@@ -44,7 +83,7 @@ function Board({ levelId, grid, setSelectedCell, selectedCell, selectedTower, se
                                 }}
                             >
                                 {type === 'Start' && enemys.map((enemy, index) => (
-                                    <Enemy key={index} type={enemy} grid={grid} enemyReachedEnd={enemyReachedEnd}/>
+                                    <Enemy key={index} type={enemy} grid={grid} enemyReachedEnd={enemyReachedEnd} />
                                 ))}
                             </Cell>
                         );
