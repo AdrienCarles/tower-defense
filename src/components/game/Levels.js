@@ -33,23 +33,6 @@ const levels = [
             ['empty', 'Start', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
         ],
     },
-    {
-        id: 3,
-        grid: [
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'End'],
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'path'],
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'path'],
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'path'],
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'path', 'path', 'path', 'empty', 'path'],
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'path', 'empty', 'path', 'empty', 'path'],
-            ['empty', 'empty', 'empty', 'empty', 'empty', 'path', 'empty', 'path', 'empty', 'path'],
-            ['empty', 'empty', 'path', 'path', 'path', 'path', 'empty', 'path', 'empty', 'path'],
-            ['empty', 'path', 'path', 'empty', 'empty', 'empty', 'empty', 'path', 'path', 'path'],
-            ['empty', 'path', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-            ['empty', 'path', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-            ['empty', 'Start', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-        ],
-    },
 ];
 
 export default levels;

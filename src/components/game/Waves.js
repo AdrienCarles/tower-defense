@@ -4,7 +4,7 @@ const waves = [
         wave: [
             { // Vague 1
                 enemies: {
-                    'type2': { count: 1 },
+                    'type1': { count: 3 },
                 }
             },
             { // Vague 2
@@ -47,32 +47,6 @@ const waves = [
             }
         ]
     },
-    { // Niveau 3
-        level: 3,
-        wave: [
-            { // Vague 1
-                enemies: {
-                    'type1': { count: 3 },
-                    'type2': { count: 4 },
-                    'type3': { count: 3 }
-                }
-            },
-            { // Vague 2
-                enemies: {
-                    'type1': { count: 3 },
-                    'type2': { count: 4 },
-                    'type3': { count: 3 }
-                }
-            },
-            { // Vague 3
-                enemies: {
-                    'type1': { count: 3 },
-                    'type2': { count: 4 },
-                    'type3': { count: 3 }
-                }
-            }
-        ]
-    }
 ];
 
 export default waves;

@@ -20,7 +20,6 @@ const LevelSelect = () => {
     const images = [
         { src: 'assets/niv1.png', title: 'Niveau 1' },
         { src: 'assets/niv2.png', title: 'Niveau 2' },
-        { src: 'assets/niv3.png', title: 'Niveau 3' }
     ];
 
     return (
