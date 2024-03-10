@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Background from '../menus/Background';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
+import niv1Image from '../../assets/niv1.png';
+import niv2Image from '../../assets/niv2.png';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Button from '../menus/Button';
 
@@ -14,12 +16,12 @@ const LevelSelect = () => {
     };
 
     const handlePlay = () => {
-        navigate(`/game/${selectedLevel + 1}`); // navigate to /game/1, /game/2, etc.
+        navigate(`/game/${selectedLevel + 1}`); // navigate to /game/1, /game/2
     };
 
     const images = [
-        { src: 'assets/niv1.png', title: 'Niveau 1' },
-        { src: 'assets/niv2.png', title: 'Niveau 2' },
+        { src: `${niv1Image}`, title: 'Niveau 1' },
+        { src: `${niv2Image}`, title: 'Niveau 2' },
     ];
 
     return (

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import backgroundImage from '../../assets/background.jpg';
 
 const Background = styled.div`
-  background-image: url(${process.env.PUBLIC_URL + '/assets/background.jpg'});
+background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center;
   height: 100vh;

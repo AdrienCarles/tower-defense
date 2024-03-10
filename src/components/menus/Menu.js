@@ -5,6 +5,7 @@ import Background from './Background';
 
 const Menu = () => {
     const navigate = useNavigate();
+    console.log(process.env.PUBLIC_URL + '/assets/background.jpg');
 
     const handlePlay = () => {
         navigate('/levelSelect');
