@@ -6,7 +6,6 @@ function Enemy({ type, grid, enemyReachedEnd }) {
   const [position, setPosition] = useState(findStartPosition(grid));
   const [lastPosition, setLastPosition] = useState(null);
   const cellSize = window.innerWidth * 0.09; // 9vw
-  console.log('enemy', enemy);
   useEffect(() => {
     switch (type) {
       case 'type1':
@@ -21,7 +20,6 @@ function Enemy({ type, grid, enemyReachedEnd }) {
       default:
         setEnemy(() => ({ health: 50, color: 'black', shape: 'circle' }));
     }
-    console.log('enemy', enemy);
   }, [type]);
 
   const move = useCallback((position, grid) => {

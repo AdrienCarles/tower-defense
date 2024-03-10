@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Cell from './Cell';
 import Enemy from './Enemy';
 
-function Board({ levelId, grid, setSelectedCell, selectedCell, selectedTower, setSelectedTower, enemyReachedEnd, enemys }) {
+function Board({ levelId, grid, setSelectedCell, selectedCell, selectedTower, setSelectedTower, enemyReachedEnd, enemys, setEnemys }) {
     const [updatedGrid, setUpdatedGrid] = useState(grid);
-    // console.log('Board', enemys);
     useEffect(() => {
         if (selectedCell && selectedTower) {
             const newGrid = [...updatedGrid];

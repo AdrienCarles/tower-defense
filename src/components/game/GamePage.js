@@ -18,7 +18,6 @@ function GamePage() {
   let currentWave = wave.find(w => w.level === levelId);
 
   const enemyReachedEnd = useCallback(() => {
-    console.log('enemyReachedEnd called');
     setLives(lives => lives - 1);
   }, []);
   
@@ -67,9 +66,9 @@ function GamePage() {
     selectedTower,
     setSelectedTower,
     enemyReachedEnd,
-    enemys
+    enemys,
+    setEnemys
   };
-console.log('lives', lives);
   return (
     <>
       <div style={{ padding: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

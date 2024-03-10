@@ -1,9 +1,9 @@
 module.exports = {
-    "globDirectory": "public/",
+    "globDirectory": "build/",
     "globPatterns": [
         "**/*.{html,js,css,png,jpg,gif,svg,eot,ttf,woff}"
     ],
-    "swDest": "public/service-worker.js",
+    "swDest": "build/service-worker.js",
     "clientsClaim": true,
     "skipWaiting": true,
 };
