@@ -12,7 +12,7 @@ function Enemy({ type, grid, enemyReachedEnd }) {
         setEnemy(() => ({ color: 'green', shape: 'circle', size: 20, speed: 400, health: 5}));
         break;
       case 'type2':
-        setEnemy(() => ({ color: 'blue', shape: 'square', size: 15, speed: 100, health: 3 }));
+        setEnemy(() => ({ color: 'blue', shape: 'square', size: 15, speed: 250, health: 3 }));
         break;
       case 'type3':
         setEnemy(() => ({ color: 'black', shape: 'square', size: 30, speed: 500, health: 10 }));
