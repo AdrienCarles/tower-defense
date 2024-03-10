@@ -4,6 +4,5 @@ module.exports = {
         "**/*.{html,js,css,png,jpg,gif,svg,eot,ttf,woff}"
     ],
     "swDest": "build/service-worker.js",
-    "clientsClaim": true,
-    "skipWaiting": true,
+    "swSrc": "public/service-worker.js",
 };
